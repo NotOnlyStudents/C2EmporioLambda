@@ -1,0 +1,24 @@
+type: object
+properties:
+  id:
+    type: string
+  customerEmail:
+    type: string
+    format: email
+  address:
+    $ref: "./address.yml" 
+  products:
+    type: array
+    items:
+      $ref: "./product.yml"
+  additionalInfo:
+    type: string
+  date:
+    type: string
+    format: date-time
+  status:
+    $ref: "./status.yml" 
+required:
+  - id
+  - address
+  - products

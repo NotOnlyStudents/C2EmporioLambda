@@ -1,0 +1,43 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "info",
+          "warn",
+          "error"
+        ]
+      }
+    ]
+  }
+}

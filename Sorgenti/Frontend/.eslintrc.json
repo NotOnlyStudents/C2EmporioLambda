@@ -1,0 +1,12 @@
+{
+    "plugins": ["@typescript-eslint"],
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": ["airbnb-typescript", "plugin:@next/next/recommended"],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+}

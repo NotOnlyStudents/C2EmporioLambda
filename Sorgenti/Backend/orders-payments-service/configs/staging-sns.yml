@@ -1,0 +1,3 @@
+region: "eu-west-1"
+payedCartARN: "arn:aws:sns:eu-west-1:501082649462:PayedCart.fifo"
+productBoughtARN: "arn:aws:sns:eu-west-1:501082649462:ProductBought.fifo"

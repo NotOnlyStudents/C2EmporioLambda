@@ -1,0 +1,115 @@
+get:
+  description: Return a list of products
+  tags:
+    - products-categories
+  parameters:
+    - name: filter
+      in: query
+      description: How the product should be filtered
+      required: false
+      schema:
+        type: array
+        items:
+          type: string
+          enum: [category, price, availability]
+    - name: pageNumber
+      in: query
+      description: The page number to display
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+    - name: elementsNumber
+      in: query
+      description: The elements number to display on the page
+      required: true
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+    - name: search
+      in: query
+      description: Search for a product with text inside name or description
+      required: false
+      style: pipeDelimited
+      schema:
+        type: array
+        items:
+          type: string
+  responses:
+    '200':
+      description: Successfully returned a list of products
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                data:
+                  $ref: "./schemas/product.yml"
+    '400':
+      description: The product filter or search parameter does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: No products found.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+
+post:
+  description: Add a new product and return it
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  requestBody:
+    description: The product to create
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            data:
+              $ref: "./schemas/product.yml"
+  responses:
+    '201':
+      description: Successfully created the product and returned
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: "./schemas/product.yml"
+    '400':
+      description: The product does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"  

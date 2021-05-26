@@ -1,0 +1,37 @@
+// @import("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --amplify-primary-color: #553C2A;
+    --amplify-primary-tint: #553C2A;
+    --amplify-primary-shade: #362920;
+    --amplify-font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --amplify-secondary-tint: #F4511E;
+}
+
+amplify-authenticator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway', 'Open Sans', sans-serif;
+    min-width: 80vw;
+    padding: 10vmin;
+}
+
+:host::shadow .toast {
+    color: black;
+}
+
+a {
+    cursor: pointer;
+}

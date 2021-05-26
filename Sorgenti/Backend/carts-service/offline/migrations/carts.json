@@ -1,0 +1,29 @@
+{
+  "Table": {
+    "TableName": "carts-table-local",
+    "KeySchema": [
+      {
+        "AttributeName": "cartId",
+        "KeyType": "HASH"
+      },
+      {
+        "AttributeName": "id",
+        "KeyType": "RANGE"
+      }
+    ],
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "cartId",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "id",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 1,
+      "WriteCapacityUnits": 1
+    }
+  }
+}

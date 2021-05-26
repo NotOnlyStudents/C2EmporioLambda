@@ -1,0 +1,12 @@
+# serverless.yml
+
+myApp:
+  component: "@sls-next/serverless-component@1.18.0"
+  inputs:
+    minifyHandlers: true
+    # useServerlessTraceTarget: true
+    domain: ["shop", "annoiato.net"]
+    cloudfront:
+      distributionId: E29JAALEMHVGZM
+    bucketName: poc-fe-nos-dev
+    bucketRegion: eu-west-1

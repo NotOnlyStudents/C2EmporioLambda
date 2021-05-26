@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  description:
+    type: string
+  images:
+    type: array
+    items: 
+      type: string
+  quantity:
+    type: integer
+    format: int32
+  discount:
+    type: integer
+    format: int32
+  price:
+    type: integer
+    format: int64
+  available:
+    type: boolean
+  evidence:
+    type: boolean
+  category:
+    type: array
+    items:
+      type: string
+required:
+  - id
+  - name
+  - quantity
+  - price
+  - category

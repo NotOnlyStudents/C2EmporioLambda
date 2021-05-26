@@ -1,0 +1,75 @@
+{
+  "Table": {
+    "TableName": "products-dev",
+    "KeySchema": [
+      {
+        "AttributeName": "id",
+        "KeyType": "HASH"
+      }
+    ],
+    "GlobalSecondaryIndexes": [
+      {
+        "IndexName": "NameIndex",
+        "KeySchema": [
+          {
+            "AttributeName": "_id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "name",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "Projection": {
+          "ProjectionType": "ALL"
+        }
+      },
+      {
+        "IndexName": "PriceIndex",
+        "KeySchema": [
+          {
+            "AttributeName": "_id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "discountedPrice",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "Projection": {
+          "ProjectionType": "ALL"
+        }
+      }
+    ],
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "id",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "_id",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "name",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "discountedPrice",
+        "AttributeType": "N"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 5,
+      "WriteCapacityUnits": 5
+    }
+  }
+}

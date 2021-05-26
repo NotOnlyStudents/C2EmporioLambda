@@ -1,0 +1,37 @@
+post:
+  description: Webhook to recieve payment events from stripe API
+  tags:
+    - payments-orders
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            'type':
+              type: string
+              enum: [payment_intent.succeeded, payment_intent.payment_failed, payment_intent.canceled]
+            data:
+              type: object
+              properties:
+                'object':
+                  type: object
+                  properties:
+                    id:
+                      type: string
+  responses:
+    '204':
+      description: Acknowledgment of the recieved  event
+    '403':
+      description: Access prohibited, only Stripe API can access this backend call
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected server error
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

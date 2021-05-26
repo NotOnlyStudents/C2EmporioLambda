@@ -1,0 +1,11 @@
+type: object
+properties:
+  address:
+    $ref: "./address.yml"
+  cart-token:
+    $ref: "./cart-token.yml"
+  additionalInfo:
+    type: string
+required:
+  - address
+  - products

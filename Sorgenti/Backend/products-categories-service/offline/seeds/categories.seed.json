@@ -1,0 +1,1292 @@
+[
+	{
+			"id": "0",
+			"name": "Uncategorised",
+			"searchName": "uncategorised"
+	},
+  {
+      "id": "10db129a-ec95-4f65-8734-a3d9ce4fc5ea",
+      "name": "Biography: General",
+      "searchName": "biography: general"
+  },
+  {
+      "id": "d276aaea-e710-4775-9a82-3283041eef10",
+      "name": "Biography: Historical, Political & Military",
+      "searchName": "biography: historical, political & military"
+  },
+  {
+      "id": "52d2c0f4-5f2b-4a2c-984b-700f2500568e",
+      "name": "True War  & Combat Stories",
+      "searchName": "true war  & combat stories"
+  },
+  {
+      "id": "1d2ae566-2ce5-43b8-a12d-51bd1cdffc7c",
+      "name": "Asian History",
+      "searchName": "asian history"
+  },
+  {
+      "id": "113491ac-af47-42e4-abbb-a89bbee3ea28",
+      "name": "Middle Eastern History",
+      "searchName": "middle eastern history"
+  },
+  {
+      "id": "dba35902-613b-4ac7-95e4-590940217319",
+      "name": "20th Century History: C 1900  To C 2000",
+      "searchName": "20th century history: c 1900  to c 2000"
+  },
+  {
+      "id": "6ee82972-0043-463f-9903-3a251e878b9e",
+      "name": "Postwar 20th Century History, From C 1945 To C 2000",
+      "searchName": "postwar 20th century history, from c 1945 to c 2000"
+  },
+  {
+      "id": "a927d525-7624-4cb0-80c5-ac281847bf34",
+      "name": "Military History",
+      "searchName": "military history"
+  },
+  {
+      "id": "d3651e1d-1691-4161-afa0-bd421fcafd88",
+      "name": "True Crime Biographies",
+      "searchName": "true crime biographies"
+  },
+  {
+      "id": "0c8b9b4f-3d58-4407-b64b-640d337b1d97",
+      "name": "True Crime Books",
+      "searchName": "true crime books"
+  },
+  {
+      "id": "8663d361-bec3-42ee-b894-d56858a4f3a1",
+      "name": "Romance",
+      "searchName": "romance"
+  },
+  {
+      "id": "9cf6ca20-a46b-4ad7-973a-b2714961c692",
+      "name": "Romance Books",
+      "searchName": "romance books"
+  },
+  {
+      "id": "afab4f5d-ff16-45d2-9739-816958ebf86b",
+      "name": "Historical Romance",
+      "searchName": "historical romance"
+  },
+  {
+      "id": "9fced5f9-e4b4-47ca-9a5c-2d86feff15cb",
+      "name": "General Encyclopaedias",
+      "searchName": "general encyclopaedias"
+  },
+  {
+      "id": "f533ead5-2ed4-45ab-90bb-370952a2fff4",
+      "name": "Funny Books & Stories",
+      "searchName": "funny books & stories"
+  },
+  {
+      "id": "73d1fcff-ee6d-4a20-9859-cd09d1ed1db3",
+      "name": "TV Tie-in Humour",
+      "searchName": "tv tie-in humour"
+  },
+  {
+      "id": "412e7a31-f326-41fd-a4a4-f1cc5221be23",
+      "name": "Assertiveness, Motivation & Self-esteem",
+      "searchName": "assertiveness, motivation & self-esteem"
+  },
+  {
+      "id": "9743560c-04d8-4626-9c60-4e047fc00759",
+      "name": "Science: General Issues",
+      "searchName": "science: general issues"
+  },
+  {
+      "id": "3b06297b-3bbc-428e-9fcb-4553f732860f",
+      "name": "Popular Science",
+      "searchName": "popular science"
+  },
+  {
+      "id": "1c523e45-a714-4617-a2f8-81a26ba4a20a",
+      "name": "Spirituality & Religious Experience",
+      "searchName": "spirituality & religious experience"
+  },
+  {
+      "id": "4c60c2af-cac8-4d18-81e4-de864b01206c",
+      "name": "Religious Groups: Social & Cultural Aspects",
+      "searchName": "religious groups: social & cultural aspects"
+  },
+  {
+      "id": "ba5606b0-4013-4d59-ba1b-ab79bcfab678",
+      "name": "Philosophy Of Science",
+      "searchName": "philosophy of science"
+  },
+  {
+      "id": "d5821f7e-c086-4818-baaa-7e2f7ed7591b",
+      "name": "Mind, Body, Spirit: Thought & Practice",
+      "searchName": "mind, body, spirit: thought & practice"
+  },
+  {
+      "id": "6ae13756-616a-417c-8eee-f1a1c97006b2",
+      "name": "Art History: From c 1960",
+      "searchName": "art history: from c 1960"
+  },
+  {
+      "id": "0fadb38f-5cee-457b-b9f2-8243371ef722",
+      "name": "Drawing",
+      "searchName": "drawing"
+  },
+  {
+      "id": "4c814e01-c3c2-49ca-94bd-94073875711c",
+      "name": "Coping With Stress",
+      "searchName": "coping with stress"
+  },
+  {
+      "id": "8d2f8558-d367-49ce-a3cb-6d56c6c1836f",
+      "name": "Crafts & Hobbies",
+      "searchName": "crafts & hobbies"
+  },
+  {
+      "id": "d3d64188-9b55-494a-bb52-46e6bd38d4a9",
+      "name": "Interior Design, Decor & Style Guides",
+      "searchName": "interior design, decor & style guides"
+  },
+  {
+      "id": "cfc99fa0-f421-48dd-80de-3b3961267006",
+      "name": "Stationery",
+      "searchName": "stationery"
+  },
+  {
+      "id": "1a0cbaa6-ebd5-4fc8-8f43-dcf2527a10bc",
+      "name": "General Cookery",
+      "searchName": "general cookery"
+  },
+  {
+      "id": "b5d576ad-9d81-4a14-83cb-206945dc2914",
+      "name": "Parodies & Spoofs",
+      "searchName": "parodies & spoofs"
+  },
+  {
+      "id": "ca2799aa-0c9e-4949-871b-f06547c46bb5",
+      "name": "Genetics (non-medical)",
+      "searchName": "genetics (non-medical)"
+  },
+  {
+      "id": "b1bfbda4-da38-4a7d-8490-375efd18725b",
+      "name": "Miscellaneous Items",
+      "searchName": "miscellaneous items"
+  },
+  {
+      "id": "ccc333b6-c3ac-44e5-95af-58c903102cdc",
+      "name": "Children's Hobby & Gaming Books",
+      "searchName": "children's hobby & gaming books"
+  },
+  {
+      "id": "d9242e38-c962-41b7-859c-76cc5b22ec03",
+      "name": "Radio",
+      "searchName": "radio"
+  },
+  {
+      "id": "b7a45612-fcde-4630-80d3-af0a0f03692a",
+      "name": "Physiological & Neuro-psychology, Biopsychology",
+      "searchName": "physiological & neuro-psychology, biopsychology"
+  },
+  {
+      "id": "66474884-c373-433d-a3fc-d6f38c4d9592",
+      "name": "Neurology & Clinical Neurophysiology",
+      "searchName": "neurology & clinical neurophysiology"
+  },
+  {
+      "id": "9f17a6e0-86f0-4fab-8603-d2c40bcfb255",
+      "name": "Clinical Psychology",
+      "searchName": "clinical psychology"
+  },
+  {
+      "id": "2f03e9e9-f85c-4b76-9761-392114efc164",
+      "name": "Neurosciences",
+      "searchName": "neurosciences"
+  },
+  {
+      "id": "36727844-83a8-43c3-af84-49b4dec5a8c2",
+      "name": "Travel Writing",
+      "searchName": "travel writing"
+  },
+  {
+      "id": "aab2f128-52d4-44c0-a2d8-0f1b78bc23a6",
+      "name": "Sex & Sexuality, Sex Manuals",
+      "searchName": "sex & sexuality, sex manuals"
+  },
+  {
+      "id": "4aa87adb-48c9-477e-8d70-e62aa5780b74",
+      "name": "Contemporary Fiction",
+      "searchName": "contemporary fiction"
+  },
+  {
+      "id": "c43509bb-2a54-4a43-b48c-bbf279eb4260",
+      "name": "Television",
+      "searchName": "television"
+  },
+  {
+      "id": "970f9fc4-5494-4546-b947-572c6c03db1a",
+      "name": "Dance & Other Performing Arts",
+      "searchName": "dance & other performing arts"
+  },
+  {
+      "id": "f83b73b7-e654-459f-a3ff-bef986ce11f1",
+      "name": "Fantasy",
+      "searchName": "fantasy"
+  },
+  {
+      "id": "14292a8d-731a-414f-9d0d-12181f305dab",
+      "name": "Fantasy Books",
+      "searchName": "fantasy books"
+  },
+  {
+      "id": "034f7198-058a-46c1-924f-2090b20186de",
+      "name": "Autobiography: Arts & Entertainment",
+      "searchName": "autobiography: arts & entertainment"
+  },
+  {
+      "id": "3015b397-13fb-4db9-b500-64821faee756",
+      "name": "Fishing, Angling",
+      "searchName": "fishing, angling"
+  },
+  {
+      "id": "b182e6ef-825f-4d3f-91de-d3c08b53dd46",
+      "name": "Family & Relationships",
+      "searchName": "family & relationships"
+  },
+  {
+      "id": "4504d5eb-e6f8-40a1-b14f-9ef371b1cbf6",
+      "name": "Social Forecasting, Future Studies",
+      "searchName": "social forecasting, future studies"
+  },
+  {
+      "id": "bc19e543-858a-406d-a1e3-569f0f18b76e",
+      "name": "International Relations",
+      "searchName": "international relations"
+  },
+  {
+      "id": "e2c33879-f63d-4a38-9aa5-eb3b20d8920f",
+      "name": "Revolutionary Groups & Movements",
+      "searchName": "revolutionary groups & movements"
+  },
+  {
+      "id": "aac8b1ec-a576-41d0-bac1-e8dc6bf2afb6",
+      "name": "International Trade",
+      "searchName": "international trade"
+  },
+  {
+      "id": "b1658f4c-23e2-41a9-890e-0cc6ecac4157",
+      "name": "Business Innovation",
+      "searchName": "business innovation"
+  },
+  {
+      "id": "ee9dee87-37b1-4821-887c-2694b6d153bd",
+      "name": "E-commerce: Business Aspects",
+      "searchName": "e-commerce: business aspects"
+  },
+  {
+      "id": "f43c1647-b337-41bd-b412-2b39165bb994",
+      "name": "Business Ethics",
+      "searchName": "business ethics"
+  },
+  {
+      "id": "64072258-21f3-422f-aa2f-5d2305fffdcc",
+      "name": "International Business",
+      "searchName": "international business"
+  },
+  {
+      "id": "63b8c3cc-8975-4be4-adc3-8268fcc812d3",
+      "name": "Impact Of Science & Technology On Society",
+      "searchName": "impact of science & technology on society"
+  },
+  {
+      "id": "a0008c94-0952-47d8-8a50-0faee07f18f5",
+      "name": "Technology: General Issues",
+      "searchName": "technology: general issues"
+  },
+  {
+      "id": "5e65d791-953b-42ca-a5c9-910353fd87e9",
+      "name": "Music",
+      "searchName": "music"
+  },
+  {
+      "id": "b3e6366e-d1e0-411f-b2a4-1ebdcdb1303f",
+      "name": "Biography: Arts & Entertainment",
+      "searchName": "biography: arts & entertainment"
+  },
+  {
+      "id": "faf43c91-13c2-47f9-8b06-69e4239164f1",
+      "name": "Social & Cultural History",
+      "searchName": "social & cultural history"
+  },
+  {
+      "id": "8f6c5f66-aa27-4eff-aa85-74c0a9466d44",
+      "name": "Society & Culture: General",
+      "searchName": "society & culture: general"
+  },
+  {
+      "id": "038fa796-31da-47d0-a879-8c2562c05114",
+      "name": "Psychology",
+      "searchName": "psychology"
+  },
+  {
+      "id": "93ee7bed-ca7c-43da-87df-1e337a73ec78",
+      "name": "Management: Leadership & Motivation",
+      "searchName": "management: leadership & motivation"
+  },
+  {
+      "id": "0b8da5be-9e16-4365-a58c-f6dcb7f53c16",
+      "name": "History Of Science",
+      "searchName": "history of science"
+  },
+  {
+      "id": "bf2f8268-a7fd-40b9-a975-3ea7831f7018",
+      "name": "Inventions & Inventors",
+      "searchName": "inventions & inventors"
+  },
+  {
+      "id": "6cdde13a-7ccb-48c8-b1d5-9d268a21c8e1",
+      "name": "Television Scripts & Screenplays",
+      "searchName": "television scripts & screenplays"
+  },
+  {
+      "id": "2a7c8dfd-bf86-4b6c-be06-faa09058b416",
+      "name": "Astronomy, Space & Time",
+      "searchName": "astronomy, space & time"
+  },
+  {
+      "id": "f1f83e49-414b-4784-8bd2-eaf614e002b2",
+      "name": "Cosmology & The Universe",
+      "searchName": "cosmology & the universe"
+  },
+  {
+      "id": "6e56614b-500e-4d48-b2d8-fdcee014c76d",
+      "name": "Global Warming",
+      "searchName": "global warming"
+  },
+  {
+      "id": "32740c23-710e-4868-8bde-986e9695d381",
+      "name": "Popular Astronomy & Space",
+      "searchName": "popular astronomy & space"
+  },
+  {
+      "id": "844ec265-f5ff-488a-86ca-13f42ec61131",
+      "name": "General & World History",
+      "searchName": "general & world history"
+  },
+  {
+      "id": "d7cad997-6893-4118-9bf3-dc042d7819f3",
+      "name": "21st Century History: From C 2000 -",
+      "searchName": "21st century history: from c 2000 -"
+  },
+  {
+      "id": "eb4b2e3f-a52f-4924-9b46-96df8670fbd1",
+      "name": "Globalization",
+      "searchName": "globalization"
+  },
+  {
+      "id": "85c39ef8-a644-414e-964b-f32af62e5def",
+      "name": "Economic History",
+      "searchName": "economic history"
+  },
+  {
+      "id": "520f9cea-e344-48f1-b6b0-def3824e58aa",
+      "name": "Anthologies (non-poetry)",
+      "searchName": "anthologies (non-poetry)"
+  },
+  {
+      "id": "a8379c1e-294e-45fa-b75e-4eaeed5d84c2",
+      "name": "Biology, Life Sciences",
+      "searchName": "biology, life sciences"
+  },
+  {
+      "id": "815d01fe-45c4-4d90-baa2-898f7bf0f56a",
+      "name": "Scientific Equipment, Experiments & Techniques",
+      "searchName": "scientific equipment, experiments & techniques"
+  },
+  {
+      "id": "428d2c4c-9394-4fc0-be7a-1fc5b8bcd327",
+      "name": "Atomic & Molecular Physics",
+      "searchName": "atomic & molecular physics"
+  },
+  {
+      "id": "4ebef620-3293-4fbf-930a-05a05f560b58",
+      "name": "Chemistry Books",
+      "searchName": "chemistry books"
+  },
+  {
+      "id": "04c58d6a-14fc-43f6-a519-1b4a16c5dd30",
+      "name": "Organic Chemistry",
+      "searchName": "organic chemistry"
+  },
+  {
+      "id": "6d602237-1df0-4440-ba57-b9241ebf8988",
+      "name": "Molecular Biology",
+      "searchName": "molecular biology"
+  },
+  {
+      "id": "332b016f-1d25-4b9a-94f1-98514ac13b45",
+      "name": "Cultural Studies",
+      "searchName": "cultural studies"
+  },
+  {
+      "id": "bc4f1338-923c-459b-9186-9af193ece4e3",
+      "name": "Self-sufficiency",
+      "searchName": "self-sufficiency"
+  },
+  {
+      "id": "df7440df-72dd-4bcb-aac4-b49de6e4666d",
+      "name": "Health Books",
+      "searchName": "health books"
+  },
+  {
+      "id": "cf66d191-9dfa-42c8-95eb-8fa3be2d6a2f",
+      "name": "Popular Psychology",
+      "searchName": "popular psychology"
+  },
+  {
+      "id": "d7acded2-da64-4f13-b29b-954f6619b09a",
+      "name": "Development Economics",
+      "searchName": "development economics"
+  },
+  {
+      "id": "048049e5-25d2-4dd0-b4ec-952f5c9fd937",
+      "name": "Ethical & Social Aspects Of Computing",
+      "searchName": "ethical & social aspects of computing"
+  },
+  {
+      "id": "b8671da9-a214-4360-824f-ec0507deb0d4",
+      "name": "History Of Medicine",
+      "searchName": "history of medicine"
+  },
+  {
+      "id": "eaf76cec-37b9-4b33-9693-3088653934a0",
+      "name": "Violence In Society",
+      "searchName": "violence in society"
+  },
+  {
+      "id": "a3be6dff-e2e2-4562-af79-bc9fb34f2459",
+      "name": "Social, Group Or Collective Psychology",
+      "searchName": "social, group or collective psychology"
+  },
+  {
+      "id": "87b584f8-9162-4d0c-8862-ddaf725dbd1a",
+      "name": "Age Groups",
+      "searchName": "age groups"
+  },
+  {
+      "id": "cdd67d78-07e0-4cf1-bac7-634326a39f64",
+      "name": "Sociology: Death & Dying",
+      "searchName": "sociology: death & dying"
+  },
+  {
+      "id": "236f2d13-d5af-44ef-8d4e-6d3370592e30",
+      "name": "Employment & Unemployment",
+      "searchName": "employment & unemployment"
+  },
+  {
+      "id": "54fb50f9-939a-4d6d-a4e6-1b67ab5bdd8a",
+      "name": "Birth Control, Contraception, Family Planning",
+      "searchName": "birth control, contraception, family planning"
+  },
+  {
+      "id": "a640981e-3df0-4b97-ad9e-e0d15d5a05cc",
+      "name": "Life Sciences: General Issues",
+      "searchName": "life sciences: general issues"
+  },
+  {
+      "id": "d71cf7c1-fdc9-4ea1-8fe3-f2da31c2e661",
+      "name": "Nanotechnology",
+      "searchName": "nanotechnology"
+  },
+  {
+      "id": "35275b18-ce20-48a1-833c-1c328b80d149",
+      "name": "Coping With Old Age",
+      "searchName": "coping with old age"
+  },
+  {
+      "id": "ed3e9ace-78e7-4b30-ab0d-381a951d6470",
+      "name": "Popular Culture",
+      "searchName": "popular culture"
+  },
+  {
+      "id": "33413ead-fe8e-4f7b-a8a6-81bb4684eff4",
+      "name": "Social & Cultural Anthropology",
+      "searchName": "social & cultural anthropology"
+  },
+  {
+      "id": "4a2ad41d-2f6e-4fd3-b389-c8b31ddf579c",
+      "name": "Evolution",
+      "searchName": "evolution"
+  },
+  {
+      "id": "dc9a1865-d0cc-41e2-b893-9b7f85906d46",
+      "name": "Natural History Books",
+      "searchName": "natural history books"
+  },
+  {
+      "id": "3c33a77d-3629-46b9-b388-b830311db7b4",
+      "name": "Cybernetics & Systems Theory",
+      "searchName": "cybernetics & systems theory"
+  },
+  {
+      "id": "911b12d0-84b3-443e-a762-9587476474a8",
+      "name": "Mathematics",
+      "searchName": "mathematics"
+  },
+  {
+      "id": "81bcf288-52d6-4857-97f5-76768c0b106f",
+      "name": "Literary Essays",
+      "searchName": "literary essays"
+  },
+  {
+      "id": "32b3359b-5e4a-4f81-8aa2-b04cf249a2b5",
+      "name": "Reportage & Collected Journalism",
+      "searchName": "reportage & collected journalism"
+  },
+  {
+      "id": "fff94b73-d1ef-4bc7-996a-7a357b8150cd",
+      "name": "Guidebooks",
+      "searchName": "guidebooks"
+  },
+  {
+      "id": "faa7a555-2609-495c-aff1-2a553cda20ea",
+      "name": "Microbiology (non-medical)",
+      "searchName": "microbiology (non-medical)"
+  },
+  {
+      "id": "35836ba0-0a44-4577-9016-0fe5d6e80b4f",
+      "name": "Children's General Story Books",
+      "searchName": "children's general story books"
+  },
+  {
+      "id": "56a75f10-4372-4f95-a1c9-869434e5206c",
+      "name": "Television & Film",
+      "searchName": "television & film"
+  },
+  {
+      "id": "14502b56-2dea-4b16-9373-da929b96fa1f",
+      "name": "Celebrity Biographies & Books",
+      "searchName": "celebrity biographies & books"
+  },
+  {
+      "id": "332a7b8f-ea56-435b-9aa8-bf37ee8b2bab",
+      "name": "Computer Science",
+      "searchName": "computer science"
+  },
+  {
+      "id": "7a215164-88ff-4fe3-a904-b184fa872d0b",
+      "name": "Virtual Reality",
+      "searchName": "virtual reality"
+  },
+  {
+      "id": "79c786b2-6490-4a86-913a-e830e06e378b",
+      "name": "Gender Studies, Gender Groups",
+      "searchName": "gender studies, gender groups"
+  },
+  {
+      "id": "32bdc600-00f1-4c08-86fe-fb8e3017ea79",
+      "name": "Gender Studies: Women",
+      "searchName": "gender studies: women"
+  },
+  {
+      "id": "a13c5a8e-0e21-441b-bcc2-69bbc0e2269e",
+      "name": "Psychology Of Gender",
+      "searchName": "psychology of gender"
+  },
+  {
+      "id": "18ff8030-936b-4b35-8475-a50bf0baecf7",
+      "name": "Humour Collections & Anthologies",
+      "searchName": "humour collections & anthologies"
+  },
+  {
+      "id": "c85844b3-07f9-4f79-b29d-fc478f18963d",
+      "name": "TV & Society",
+      "searchName": "tv & society"
+  },
+  {
+      "id": "26890fc9-d335-4bda-a44b-b83b928a00fc",
+      "name": "Dating, Relationships, Living Together & Marriage",
+      "searchName": "dating, relationships, living together & marriage"
+  },
+  {
+      "id": "d3b5f5ca-6754-4089-bf12-6c6dda374190",
+      "name": "Ethics & Moral Philosophy",
+      "searchName": "ethics & moral philosophy"
+  },
+  {
+      "id": "046df346-af8f-4fa5-8282-4a8932f20c5a",
+      "name": "Ethical Issues & Debates",
+      "searchName": "ethical issues & debates"
+  },
+  {
+      "id": "4d383da6-b2a8-4997-907d-08bd3d322c71",
+      "name": "Botany & Plant Sciences",
+      "searchName": "botany & plant sciences"
+  },
+  {
+      "id": "c02230a2-834f-407c-917b-371f06624f72",
+      "name": "Trees, Wildflowers & Plants",
+      "searchName": "trees, wildflowers & plants"
+  },
+  {
+      "id": "598d134a-ac3c-4b75-bae2-b47a65fefd36",
+      "name": "Geology & The Lithosphere",
+      "searchName": "geology & the lithosphere"
+  },
+  {
+      "id": "7852c2d9-bccf-461b-87e3-28e01fd3fecf",
+      "name": "Ethical Issues: Scientific & Technological Developments",
+      "searchName": "ethical issues: scientific & technological developments"
+  },
+  {
+      "id": "f088f5b3-68c2-447e-900c-f52af458f7c3",
+      "name": "Science & Geography",
+      "searchName": "science & geography"
+  },
+  {
+      "id": "8893e69d-0805-4f15-8326-0bb99d07738b",
+      "name": "Research Methods: General",
+      "searchName": "research methods: general"
+  },
+  {
+      "id": "62e2457e-893f-42c4-a0ad-eb2e77156adf",
+      "name": "Characters",
+      "searchName": "characters"
+  },
+  {
+      "id": "5fa29990-0006-42e8-9bcb-dec515c62edd",
+      "name": "Children's Fiction",
+      "searchName": "children's fiction"
+  },
+  {
+      "id": "c02ff202-bb29-4412-abdc-cb81c380dd45",
+      "name": "Adventure Books for Kids",
+      "searchName": "adventure books for kids"
+  },
+  {
+      "id": "10f68c72-8c3b-4df6-8891-565e3b46a4fb",
+      "name": "Sci Fi Books for Kids",
+      "searchName": "sci fi books for kids"
+  },
+  {
+      "id": "c5c48af2-b6c7-4eed-8a03-18f2b91868be",
+      "name": "Fantasy Books for Kids",
+      "searchName": "fantasy books for kids"
+  },
+  {
+      "id": "2ba8584b-3862-4f74-8af2-a9d57981fed3",
+      "name": "Drama",
+      "searchName": "drama"
+  },
+  {
+      "id": "83159708-10c2-481b-b8f1-641d52b9324c",
+      "name": "General Knowledge",
+      "searchName": "general knowledge"
+  },
+  {
+      "id": "873af6c3-d9aa-4ab3-888d-29bfc415a2fb",
+      "name": "Handicrafts",
+      "searchName": "handicrafts"
+  },
+  {
+      "id": "4eccee17-84b3-41b2-9831-ff77734691e3",
+      "name": "Puzzle Books",
+      "searchName": "puzzle books"
+  },
+  {
+      "id": "a3964f76-7e60-47d7-8912-1df90d5615ab",
+      "name": "Witches & Ghosts (Children's/YA)",
+      "searchName": "witches & ghosts (children's/ya)"
+  },
+  {
+      "id": "ca93c108-61b1-4440-9fca-09152bf50b09",
+      "name": "Medicine",
+      "searchName": "medicine"
+  },
+  {
+      "id": "e7988883-d04b-42b2-b707-d84f454555be",
+      "name": "Medical Research",
+      "searchName": "medical research"
+  },
+  {
+      "id": "07295222-ce8f-4903-b061-1ec002b53669",
+      "name": "Epidemiology & Medical Statistics",
+      "searchName": "epidemiology & medical statistics"
+  },
+  {
+      "id": "ea002ad5-a61e-44a3-8fcd-eb3c1a76831a",
+      "name": "Clinical & Internal Medicine",
+      "searchName": "clinical & internal medicine"
+  },
+  {
+      "id": "0ead0ad5-19fc-47ec-89dd-524f90575b6c",
+      "name": "Probability & Statistics",
+      "searchName": "probability & statistics"
+  },
+  {
+      "id": "f01b1573-a67e-4176-9925-87061b5812f5",
+      "name": "Maths For Scientists",
+      "searchName": "maths for scientists"
+  },
+  {
+      "id": "bc125efe-6a52-4080-acaf-dd01a927dbcf",
+      "name": "Physics Books",
+      "searchName": "physics books"
+  },
+  {
+      "id": "596bb9b2-aedb-4d5b-a5be-ff5cd721ac22",
+      "name": "Mathematical Physics",
+      "searchName": "mathematical physics"
+  },
+  {
+      "id": "e87141b4-2b48-4856-89b5-ee2a4fd5432a",
+      "name": "Maths For Engineers",
+      "searchName": "maths for engineers"
+  },
+  {
+      "id": "f36a8f8a-64bb-4062-a20c-cb511b8c659f",
+      "name": "Deconstructionism, Structuralism, Post-structuralism",
+      "searchName": "deconstructionism, structuralism, post-structuralism"
+  },
+  {
+      "id": "cc51de0e-832f-48fb-8984-405f51bef115",
+      "name": "Oriental & Indian Philosophy",
+      "searchName": "oriental & indian philosophy"
+  },
+  {
+      "id": "df7e5fe9-9386-460c-9599-c782d0e54e34",
+      "name": "Philosophy: Metaphysics & Ontology",
+      "searchName": "philosophy: metaphysics & ontology"
+  },
+  {
+      "id": "e1baeda4-05b8-45a8-8fbe-ede0e46ba73a",
+      "name": "Cartoons & Comic Strips",
+      "searchName": "cartoons & comic strips"
+  },
+  {
+      "id": "dc6b92e9-4fc5-4177-a3ae-4f24af63240b",
+      "name": "Mathematical Foundations",
+      "searchName": "mathematical foundations"
+  },
+  {
+      "id": "c68eccc8-d736-4f6b-89b6-0d684d569d11",
+      "name": "Geometry",
+      "searchName": "geometry"
+  },
+  {
+      "id": "cbd2bf8b-54e3-412e-a3f3-7f489737351f",
+      "name": "History Of Mathematics",
+      "searchName": "history of mathematics"
+  },
+  {
+      "id": "5b784dcb-ae08-4156-918f-af1f45df7e86",
+      "name": "Human Biology",
+      "searchName": "human biology"
+  },
+  {
+      "id": "b38745e7-46d3-470e-b919-8c8b0a570768",
+      "name": "Constitution: Government & The State",
+      "searchName": "constitution: government & the state"
+  },
+  {
+      "id": "36622d73-aa22-446d-b4da-5e29c8f66206",
+      "name": "Central Government",
+      "searchName": "central government"
+  },
+  {
+      "id": "fde3f868-dfd9-41c2-bd73-832079230dec",
+      "name": "Regional Government",
+      "searchName": "regional government"
+  },
+  {
+      "id": "421bef24-65ee-4978-b877-072a3dd9b355",
+      "name": "Television Soap Operas",
+      "searchName": "television soap operas"
+  },
+  {
+      "id": "ddfea038-ff15-4017-817f-38fe041d2786",
+      "name": "Cycling",
+      "searchName": "cycling"
+  },
+  {
+      "id": "b0f16b12-e8dc-4458-a732-807a692ee814",
+      "name": "Philosophy: Logic",
+      "searchName": "philosophy: logic"
+  },
+  {
+      "id": "d9a3f291-051b-463f-a56f-8dc95ccb35ad",
+      "name": "Mathematical Logic",
+      "searchName": "mathematical logic"
+  },
+  {
+      "id": "372397fb-86ba-4d74-a329-4a9f2d9292e2",
+      "name": "Inclusive Education / Mainstreaming",
+      "searchName": "inclusive education / mainstreaming"
+  },
+  {
+      "id": "2e272c7c-64ec-4b94-9d95-4142cafc1c0e",
+      "name": "Multicultural Education",
+      "searchName": "multicultural education"
+  },
+  {
+      "id": "e08e874d-769e-4739-b12c-29afbd7757c4",
+      "name": "Teaching Of Specific Groups & Persons With Special Educational Needs",
+      "searchName": "teaching of specific groups & persons with special educational needs"
+  },
+  {
+      "id": "7a535166-c969-4a30-86ad-6707a9df8c54",
+      "name": "Teaching Skills & Techniques",
+      "searchName": "teaching skills & techniques"
+  },
+  {
+      "id": "87241c11-c60f-4101-a49e-38ee1091d360",
+      "name": "Educational Strategies & Policy",
+      "searchName": "educational strategies & policy"
+  },
+  {
+      "id": "2e5fd477-864d-4eb1-a61c-054a108a2744",
+      "name": "Teaching Staff",
+      "searchName": "teaching staff"
+  },
+  {
+      "id": "f76332a5-8e43-41cc-aa31-e7986536bfde",
+      "name": "Primary & Middle Schools",
+      "searchName": "primary & middle schools"
+  },
+  {
+      "id": "bbbaca48-4a3a-4f91-9425-ec5f7bed9e73",
+      "name": "Examinations & Assessment",
+      "searchName": "examinations & assessment"
+  },
+  {
+      "id": "b9226796-eccd-4762-94c7-f4415775f692",
+      "name": "Pre-school & Kindergarten",
+      "searchName": "pre-school & kindergarten"
+  },
+  {
+      "id": "15293101-9288-4600-93bb-a001b321709b",
+      "name": "Secondary Schools",
+      "searchName": "secondary schools"
+  },
+  {
+      "id": "7a1ce06c-6fb8-4792-aa13-70c72abf8d43",
+      "name": "Sleep & Dreams",
+      "searchName": "sleep & dreams"
+  },
+  {
+      "id": "afb761b4-667c-47ad-83e4-354102ee6b4b",
+      "name": "Health Psychology",
+      "searchName": "health psychology"
+  },
+  {
+      "id": "d550d228-e51e-46d3-bee1-b040ad9302e8",
+      "name": "Dreams & Their Interpretation",
+      "searchName": "dreams & their interpretation"
+  },
+  {
+      "id": "d3c8c18e-20d1-40ff-ad86-12d7a5c71dd3",
+      "name": "ELT: Teaching Theory & Methods",
+      "searchName": "elt: teaching theory & methods"
+  },
+  {
+      "id": "a928b899-78aa-44b8-b0b8-8a65594b5dfc",
+      "name": "ELT: Learning Material & Coursework",
+      "searchName": "elt: learning material & coursework"
+  },
+  {
+      "id": "e6990bc5-4d85-4aab-a89b-b4475265b4ca",
+      "name": "Teaching Of A Specific Subject",
+      "searchName": "teaching of a specific subject"
+  },
+  {
+      "id": "3cf17a04-1978-46a8-95b0-5e673f167775",
+      "name": "Food Technology",
+      "searchName": "food technology"
+  },
+  {
+      "id": "5f0f1b70-8f3f-455b-940c-fc249aeffff1",
+      "name": "Oceanography (seas)",
+      "searchName": "oceanography (seas)"
+  },
+  {
+      "id": "55c691b3-c23a-4856-8d96-faf7535931f1",
+      "name": "Environmental Science, Engineering & Technology",
+      "searchName": "environmental science, engineering & technology"
+  },
+  {
+      "id": "97d00d3e-d41a-46fd-9fd5-80486ee8e60f",
+      "name": "Semantics",
+      "searchName": "semantics"
+  },
+  {
+      "id": "83be30c2-2163-40fb-957d-a27ea81c3a50",
+      "name": "Philosophy & Theory Of Education",
+      "searchName": "philosophy & theory of education"
+  },
+  {
+      "id": "64630f4a-72f2-4f38-a986-cb408a6e9c6e",
+      "name": "Curriculum Planning & Development",
+      "searchName": "curriculum planning & development"
+  },
+  {
+      "id": "a3813d7d-20db-4dcf-bfce-f6d2e950daab",
+      "name": "Adult Education, Continuous Learning",
+      "searchName": "adult education, continuous learning"
+  },
+  {
+      "id": "1ce05db4-6c58-47f3-a6b7-be8c5a3c3f32",
+      "name": "Industrial Or Vocational Training",
+      "searchName": "industrial or vocational training"
+  },
+  {
+      "id": "cc745891-61e8-45c0-8c1d-2ea126cff802",
+      "name": "Personal Development",
+      "searchName": "personal development"
+  },
+  {
+      "id": "8543389c-807a-4bc5-a4a1-7d9c0490d5d6",
+      "name": "History Of The Americas",
+      "searchName": "history of the americas"
+  },
+  {
+      "id": "2312fb74-7bbf-4085-9866-df1ec25e6025",
+      "name": "Astrophysics",
+      "searchName": "astrophysics"
+  },
+  {
+      "id": "b518f59a-9ab7-4528-a695-b24002763d2a",
+      "name": "History Of Engineering & Technology",
+      "searchName": "history of engineering & technology"
+  },
+  {
+      "id": "643da70d-7ab3-440f-9c33-dd122dba0abd",
+      "name": "Aerospace & Aviation Technology",
+      "searchName": "aerospace & aviation technology"
+  },
+  {
+      "id": "d79aaafb-7010-446c-8bae-4d4aa528426c",
+      "name": "Space Science",
+      "searchName": "space science"
+  },
+  {
+      "id": "df25fa6b-ba36-4eb0-a5bc-7ab1b0338c8c",
+      "name": "Teaching Resources & Education",
+      "searchName": "teaching resources & education"
+  },
+  {
+      "id": "7e05511b-b21f-4a82-933b-10b7f67eadc1",
+      "name": "Organization & Management Of Education",
+      "searchName": "organization & management of education"
+  },
+  {
+      "id": "9221bbd4-6c3f-438d-97d1-3666e48b0d64",
+      "name": "Educational Psychology",
+      "searchName": "educational psychology"
+  },
+  {
+      "id": "3e54c5e0-88cc-4d8b-8477-440f0ebea186",
+      "name": "Educational Equipment & Technology, Computer-aided Learning (CAL)",
+      "searchName": "educational equipment & technology, computer-aided learning (cal)"
+  },
+  {
+      "id": "76e16320-d25e-41ba-bead-4134e896515e",
+      "name": "Sciences",
+      "searchName": "sciences"
+  },
+  {
+      "id": "f81f7946-a3dd-4741-b99a-f6bd2963a47c",
+      "name": "Literacy",
+      "searchName": "literacy"
+  },
+  {
+      "id": "b217f4d5-df45-4671-b395-145b5c8ed5dd",
+      "name": "Children's Foreign Language Books",
+      "searchName": "children's foreign language books"
+  },
+  {
+      "id": "56e34bae-5e5d-45ff-90be-f18ab272bf0a",
+      "name": "Mathematics & Numeracy",
+      "searchName": "mathematics & numeracy"
+  },
+  {
+      "id": "52d22e79-e121-4822-887c-b26dbf4b8186",
+      "name": "True Stories Of Heroism, Endurance & Survival",
+      "searchName": "true stories of heroism, endurance & survival"
+  },
+  {
+      "id": "c07a77cb-603d-49c0-92b3-ea77a2e790a1",
+      "name": "Extreme Sports",
+      "searchName": "extreme sports"
+  },
+  {
+      "id": "123b1b48-907a-4c4b-b123-46459ef5a491",
+      "name": "Schools & Museums",
+      "searchName": "schools & museums"
+  },
+  {
+      "id": "592a3d64-aba6-4af8-a07e-e9cc5fc307fb",
+      "name": "English Language",
+      "searchName": "english language"
+  },
+  {
+      "id": "527cd7ec-e495-4b77-9600-72c3c48c6d72",
+      "name": "Students & Student Organisations",
+      "searchName": "students & student organisations"
+  },
+  {
+      "id": "c82ff118-68c8-49c5-af82-5c88d257cca7",
+      "name": "General Study Books",
+      "searchName": "general study books"
+  },
+  {
+      "id": "4b0bbf3a-16c0-4edb-8227-84ecb14fcd0e",
+      "name": "Teacher Training",
+      "searchName": "teacher training"
+  },
+  {
+      "id": "73e3341b-eef7-40dd-8a7d-2070efced4f4",
+      "name": "Biography: Science, Technology & Engineering",
+      "searchName": "biography: science, technology & engineering"
+  },
+  {
+      "id": "6c7df412-f81c-43a3-8e07-ca28de826e47",
+      "name": "DNA & Genome",
+      "searchName": "dna & genome"
+  },
+  {
+      "id": "d7b0b2bc-af0b-4368-b2fd-373fa231729c",
+      "name": "Education: Care & Counselling Of Students",
+      "searchName": "education: care & counselling of students"
+  },
+  {
+      "id": "d0d8bee2-0e7d-4596-9d7f-050e50f2c875",
+      "name": "Teachers' Classroom Resources & Material",
+      "searchName": "teachers' classroom resources & material"
+  },
+  {
+      "id": "59f40e86-b370-481c-80de-ffc2e2cf1cb8",
+      "name": "Self-Esteem",
+      "searchName": "self-esteem"
+  },
+  {
+      "id": "a3901e58-67d4-4589-b406-c1d904d34b8a",
+      "name": "English Language: Reading & Writing Skills",
+      "searchName": "english language: reading & writing skills"
+  },
+  {
+      "id": "a5a5cc1c-5bc4-45e0-aecc-d953b27adb01",
+      "name": "Health & Wholefood Cookery",
+      "searchName": "health & wholefood cookery"
+  },
+  {
+      "id": "8ed01bcc-6368-4a34-bda1-9993bfb9b3fc",
+      "name": "Vegetarian Cookery",
+      "searchName": "vegetarian cookery"
+  },
+  {
+      "id": "9d3df655-7e25-4adf-81e0-d871198a6022",
+      "name": "Cookery Dishes & Courses",
+      "searchName": "cookery dishes & courses"
+  },
+  {
+      "id": "79ab49f0-c587-4acd-9c6d-8d5664b85559",
+      "name": "Information Theory",
+      "searchName": "information theory"
+  },
+  {
+      "id": "70c1afbf-43c6-4f9f-92a8-cf0271e1e16a",
+      "name": "Social Issues & Processes",
+      "searchName": "social issues & processes"
+  },
+  {
+      "id": "258bdde8-6a70-4b9b-9542-ac78be1a96c8",
+      "name": "Economics",
+      "searchName": "economics"
+  },
+  {
+      "id": "e532a91a-f33c-4e3a-a8bd-5dfddaaa0d26",
+      "name": "Economic Systems & Structures",
+      "searchName": "economic systems & structures"
+  },
+  {
+      "id": "a76fcc19-8445-4e71-9b03-503ebca5b84d",
+      "name": "Market Research",
+      "searchName": "market research"
+  },
+  {
+      "id": "6ec66eda-2de0-4361-8dc8-4cecd8dcfd9b",
+      "name": "Surveillance Services",
+      "searchName": "surveillance services"
+  },
+  {
+      "id": "bd8bc2bb-6279-4eb1-8fd0-6596c4eca6ff",
+      "name": "Information Technology Industries",
+      "searchName": "information technology industries"
+  },
+  {
+      "id": "cfc2f549-6371-4a1b-ab67-3758e93b51a3",
+      "name": "Higher & Further Education, Tertiary Education",
+      "searchName": "higher & further education, tertiary education"
+  },
+  {
+      "id": "81176153-42ca-40a0-acd8-493333eff032",
+      "name": "Desserts",
+      "searchName": "desserts"
+  },
+  {
+      "id": "8623a263-9690-4635-b4f2-219403e7cacb",
+      "name": "Biography: Literary",
+      "searchName": "biography: literary"
+  },
+  {
+      "id": "4dad962e-c490-4857-b929-f9669c2e18e8",
+      "name": "Learning",
+      "searchName": "learning"
+  },
+  {
+      "id": "e8db04f5-7041-4fcd-bb54-303bbc040ace",
+      "name": "Quick & Easy Cooking",
+      "searchName": "quick & easy cooking"
+  },
+  {
+      "id": "4ee1e342-4879-4175-96d1-df8388cc4f49",
+      "name": "Cookery By Ingredient",
+      "searchName": "cookery by ingredient"
+  },
+  {
+      "id": "ade5a8a0-81cc-4da2-b192-1510f4d5954a",
+      "name": "Social Impact Of Disasters",
+      "searchName": "social impact of disasters"
+  },
+  {
+      "id": "34582e7c-0d43-4490-86a1-058990444a4b",
+      "name": "Nuclear Structure Physics",
+      "searchName": "nuclear structure physics"
+  },
+  {
+      "id": "e687a31c-01e5-417a-9a52-f84695da6825",
+      "name": "Safety In The Home",
+      "searchName": "safety in the home"
+  },
+  {
+      "id": "ccdcb26f-2f5e-402d-9acd-1fd87cf96854",
+      "name": "Bullying & Anti-bullying Strategies",
+      "searchName": "bullying & anti-bullying strategies"
+  },
+  {
+      "id": "1cf6202b-652a-4565-b868-75c1465b272a",
+      "name": "Agricultural Science",
+      "searchName": "agricultural science"
+  },
+  {
+      "id": "15c6c65d-9aa7-4711-a9d0-f4e717f5add3",
+      "name": "Sustainable Agriculture",
+      "searchName": "sustainable agriculture"
+  },
+  {
+      "id": "f537a583-327b-4f72-945f-306451a1ab5a",
+      "name": "Agronomy & Crop Production",
+      "searchName": "agronomy & crop production"
+  },
+  {
+      "id": "152c8ec3-ad5a-470e-88f4-394ac8a39f4d",
+      "name": "Zoology & Animal Sciences",
+      "searchName": "zoology & animal sciences"
+  },
+  {
+      "id": "df299512-9d23-40ae-bc28-649fd03a2fc2",
+      "name": "Conservation Of Wildlife & Habitats",
+      "searchName": "conservation of wildlife & habitats"
+  },
+  {
+      "id": "096da8ed-31d5-4eb5-ba01-efefedb6fcdb",
+      "name": "Wildlife: General Interest",
+      "searchName": "wildlife: general interest"
+  },
+  {
+      "id": "5a52ef55-1644-4ddb-a8f9-e43ff8c46928",
+      "name": "Wildlife: Birds & Birdwatching",
+      "searchName": "wildlife: birds & birdwatching"
+  },
+  {
+      "id": "ccb2255c-b6c1-4d76-a2a8-cf891f588c2d",
+      "name": "Wildlife: Mammals",
+      "searchName": "wildlife: mammals"
+  },
+  {
+      "id": "f155d975-f608-42d2-87d4-4f156fc29191",
+      "name": "Wildlife: Butterflies, Other Insects & Spiders",
+      "searchName": "wildlife: butterflies, other insects & spiders"
+  },
+  {
+      "id": "f20a2297-85c9-4707-827f-4c036f76e591",
+      "name": "Eco-tourist Guides",
+      "searchName": "eco-tourist guides"
+  },
+  {
+      "id": "17ea797b-3d0b-40f5-93ec-1afde34a84e6",
+      "name": "Philosophy",
+      "searchName": "philosophy"
+  },
+  {
+      "id": "c4b06034-ad0d-46d3-a611-c0e346c1b67f",
+      "name": "Cost Accounting",
+      "searchName": "cost accounting"
+  },
+  {
+      "id": "89323f14-d5c5-4665-95d7-7497cfe87f33",
+      "name": "Management Accounting & Bookkeeping",
+      "searchName": "management accounting & bookkeeping"
+  },
+  {
+      "id": "22c26fa0-bbd6-4ee0-ba7c-58b3b1aae88d",
+      "name": "Religious Life & Practice",
+      "searchName": "religious life & practice"
+  },
+  {
+      "id": "1e31be5f-c75c-45f9-8c65-d512013c1075",
+      "name": "Animals & Society",
+      "searchName": "animals & society"
+  },
+  {
+      "id": "5ac01f69-9726-480a-8883-d4d768db3e9e",
+      "name": "Advice On Careers & Achieving Success",
+      "searchName": "advice on careers & achieving success"
+  },
+  {
+      "id": "976b02f7-9064-406a-bda5-83c0866eb85b",
+      "name": "Peace Studies & Conflict Resolution",
+      "searchName": "peace studies & conflict resolution"
+  },
+  {
+      "id": "5406ce0a-0ade-4ee4-82e9-eba8367f7dd2",
+      "name": "Western Philosophy: Medieval & Renaissance, C 500 To C 1600",
+      "searchName": "western philosophy: medieval & renaissance, c 500 to c 1600"
+  },
+  {
+      "id": "e128c78c-735e-43f6-8eed-7f913b8edf08",
+      "name": "Social & Political Philosophy",
+      "searchName": "social & political philosophy"
+  },
+  {
+      "id": "ddc63212-5b17-4803-9e06-2c68fc0b88c6",
+      "name": "Jewish Books",
+      "searchName": "jewish books"
+  },
+  {
+      "id": "18260b3b-063b-49c1-85f5-302dec7d52c3",
+      "name": "Politics & Government",
+      "searchName": "politics & government"
+  },
+  {
+      "id": "329c0a89-ffa2-40ae-9f26-449742b2f266",
+      "name": "Teaching Of Gifted Students",
+      "searchName": "teaching of gifted students"
+  },
+  {
+      "id": "ee9114f8-81ee-4253-8019-37ebea6367b3",
+      "name": "Historical & Comparative Linguistics",
+      "searchName": "historical & comparative linguistics"
+  },
+  {
+      "id": "3ad17150-4044-4569-b90e-64988bf5311f",
+      "name": "Language Teaching & Learning (other Than ELT)",
+      "searchName": "language teaching & learning (other than elt)"
+  }
+]

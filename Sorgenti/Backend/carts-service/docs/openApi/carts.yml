@@ -1,0 +1,67 @@
+post:
+  description: Add a new product to the buyer's cart 
+  tags:
+    - carts
+  security:
+    - oAuth:
+      - writeUser
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './schemas/product-token.yml'
+  responses:
+    '204':
+      description: Successfull modification of the cart
+    '400':
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: No authentication information was given, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '403':
+      description: Wrong permissions, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected server error
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+
+get:
+  description: Obtain information about a user personal cart
+  tags:
+    - carts
+  security:
+    - oAuth:
+      - read
+  responses:
+    '200':
+      description: Successfully returned a cart
+      content:
+        application/json:
+          schema:
+              $ref: './schemas/cart-token.yml'
+    '401':
+      description: No authentication information was given, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected server error
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

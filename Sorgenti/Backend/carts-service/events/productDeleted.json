@@ -1,0 +1,18 @@
+{
+  "Records": [
+    {
+      "messageId": "19dd0b57-b21e-4ac1-bd88-01bbb068cb78",
+      "receiptHandle": "MessageReceiptHandle",
+      "body": "{ \"Type\": \"Notification\", \"MessageId\": \"4ce0cebc-6717-5ccc-b8ab-96408fd8b7c0\", \"SequenceNumber\": \"10000000000000000024\", \"TopicArn\": \"arn:aws:sns:eu-west-1:501082649462:ProductDeleted.fifo\", \"Message\": \"{\\\"id\\\":\\\"1\\\"}\",\"Timestamp\": \"2021-04-23T15:23:59.356Z\",\"UnsubscribeURL\": \"https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:501082649462:NewUser.fifo:8ee9a055-cf0f-407c-9164-2232b16db5c7\" }",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1523232000000",
+        "SenderId": "123456789012",
+        "ApproximateFirstReceiveTimestamp": "1523232000001"
+      },
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:eu-west-1:123456789012:ProductDeletedQueue",
+      "awsRegion": "eu-west-1"
+    }
+  ]
+}

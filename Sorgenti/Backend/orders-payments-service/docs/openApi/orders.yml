@@ -1,0 +1,121 @@
+post:
+  description: Create a new order for the user requesting
+  tags:
+    - payments-orders
+  security:
+    - oAuth:
+      - writeUser
+      - writeAdmin
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "./schemas/orderIn.yml"
+  responses:
+    '200':
+      description: The checkout session was succesfully opened and the order created
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data: 
+                type: object
+                properties:
+                  sessionId:
+                    type: string
+    '400':
+      description: The given order is not in the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+
+get:
+  description: Return a list of orders filtered according to given parameters
+  tags:
+    - payments-orders
+  security:
+    - oAuth:
+      - read
+      - readAdmin
+  parameters:
+    - name: status
+      in: query
+      description: Filter orders that match the given status
+      required: false
+      schema:
+        $ref: "./schemas/status.yml"
+    - name: start
+      in: query
+      description: Filter orders that were created on or after the specified date
+      required: false
+      schema:
+        type: string
+        format: date-time
+    - name: end
+      in: query
+      description: Filter orders that were created before or on the specified date
+      required: false
+      schema:
+        type: string
+        format: date-time
+    - name: email
+      in: query
+      description: Filter orders made by a specific user (only vendor)
+      required: false
+      schema:
+        type: string
+        format: email
+  responses:
+    '200':
+      description: Successfully returned a list of orders
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "./schemas/orderOut.yml"
+    '400':
+      description: Bad parameter format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '403':
+      description: Only vendor can filter orders by User
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: No orders with the specified filters where found.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

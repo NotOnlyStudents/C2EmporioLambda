@@ -1,0 +1,90 @@
+delete:
+  description: Delete a product category
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  parameters:
+    - $ref: "./parameters/categoryName.path.yml"
+  responses:
+    '200':
+      description: Successfully deleted a product category
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+    '400':
+      description: The category name does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: A category with the specified name was not found.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+put:
+  description: Update a product category
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  parameters:
+    - $ref: "./parameters/categoryName.path.yml"
+  requestBody:
+    description: The category to update with
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            category:
+              type: string
+  responses:
+    '200':
+      description: Successfully created a new product category
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+    '400':
+      description: The category name does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: A category with the specified name was not found.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

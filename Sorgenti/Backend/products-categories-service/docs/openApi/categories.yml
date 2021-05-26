@@ -1,0 +1,84 @@
+get:
+  description: Return a list of product categories
+  tags:
+    - products-categories
+  parameters:
+    - name: search
+      in: query
+      description: Search for a product category name
+      required: false
+      style: pipeDelimited
+      schema:
+        type: array
+        items:
+          type: string
+  responses:
+    '200':
+      description: Successfully returned a list of product categories
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  type: string
+    '404':
+      description: Categories not found.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+      
+post:
+  description: Create a new product category
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  requestBody:
+    description: The category to create
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            category:
+              type: string
+  responses:
+    '201':
+      description: Successfully created a new product category
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: string
+    '400':
+      description: The category does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: Authorization information is missing or invalid.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

@@ -1,0 +1,147 @@
+get:
+  description: Return a product by id
+  tags:
+    - products-categories
+  parameters:
+    - $ref: "./parameters/productId.path.yml"
+  responses:
+    '200':
+      description: Successfully returned a product by id
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: "./schemas/product-token.yml"
+    '400':
+      description: The product id does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: Product not found with specified id.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+
+delete:
+  description: Delete a product by id
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  parameters:
+    - $ref: "./parameters/productId.path.yml"
+  responses:
+    '200':
+      description: Successfully deleted a product by id
+    '400':
+      description: The product id does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: No authentication information was given, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: Product not found with specified id.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+      
+patch:
+  description: Update some product's field(s) and return it
+  tags:
+    - products-categories
+  security:
+    - oAuth:
+      - writeAdmin
+  parameters:
+    - $ref: "./parameters/productId.path.yml"
+  requestBody:
+    description: The field(s) to update
+    required: true
+    content:
+      application/json:
+        schema:
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            images:
+              type: array
+              items: 
+                type: string
+            quantity:
+              type: integer
+              format: int32 # int
+            price:          # price in centes
+              type: integer
+              format: int64 # long int
+            available:
+              type: boolean
+            evidence:
+              type: boolean
+            discount:
+              type: number
+              format: int32
+            category:
+              type: array
+              items:
+                type: string
+  responses:
+    '200':
+      description: Successfully created the product and returned
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: "./schemas/product.yml"
+    '400':
+      description: The product id or request body does not fit the correct format.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: No authentication information was given, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '404':
+      description: Product not found with specified id.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected error.
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

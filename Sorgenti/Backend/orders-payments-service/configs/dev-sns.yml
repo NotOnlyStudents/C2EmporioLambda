@@ -1,0 +1,4 @@
+region: "localhost"
+endpoint: "http://localhost:8000"
+payedCartARN: "arn:aws:sns:eu-west-1:501082649462:PayedCart.fifo"
+productBoughtARN: "arn:aws:sns:eu-west-1:501082649462:ProductBought.fifo"

@@ -1,0 +1,18 @@
+type: object
+properties:
+  token:
+    type: object
+    properties:
+      data:
+        $ref: ./product.yml
+      timeout:
+        type: string
+        format: date-time
+  hmac:
+    type: string
+    format: byte # base64 encoded
+    minLength: 44
+    maxLength: 44
+required:
+ - token
+ - hmac

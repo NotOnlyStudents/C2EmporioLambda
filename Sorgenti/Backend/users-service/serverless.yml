@@ -1,0 +1,134 @@
+service: users-service
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, "dev"}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - cognito-idp:AdminAddUserToGroup
+          Resource: '*'
+  environment:
+    CALLBACK_URL: "http://localhost:3000"
+    REGION: ${self:provider.region}
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+package:
+  individually: true
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+functions:
+  postSignUpTrigger:
+    handler: src/endpoints/postSignUpTrigger.default
+    description: Every new user who confirms his email, he will be assigned to "buyers" user group
+    events:
+      - cognitoUserPool:
+          pool: ${self:provider.stage}-user-pool
+          trigger: PostConfirmation
+          existing: true
+
+resources:
+  Resources:
+    CognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: ${self:provider.stage}-user-pool
+        UsernameAttributes:
+          - email
+        AutoVerifiedAttributes:
+          - email
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 8
+            RequireLowercase: true
+            RequireNumbers: true
+            RequireSymbols: true
+            RequireUppercase: true
+        VerificationMessageTemplate:
+          DefaultEmailOption: CONFIRM_WITH_CODE 
+          EmailSubject: "EmporioLambda - Verify your email"
+          EmailMessage: "Here is your email verification code: <strong>{####}</strong>"
+        AccountRecoverySetting:
+          RecoveryMechanisms:
+            - Name: verified_email
+              Priority: 1
+        DeviceConfiguration:
+          DeviceOnlyRememberedOnUserPrompt: true
+        Schema:
+          - AttributeDataType: String
+            Mutable: true
+            Required: false
+            Name: firstName
+          - AttributeDataType: String
+            Mutable: true
+            Required: false
+            Name: lastName
+          - AttributeDataType: String
+            Mutable: true
+            Required: false
+            Name: email
+           
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: ${self:provider.stage}-user-pool-client
+        AllowedOAuthFlows:
+          - code
+          - implicit
+        AllowedOAuthFlowsUserPoolClient: true
+        AllowedOAuthScopes:
+          - email
+          - openid
+          - profile
+        UserPoolId:
+          Ref: CognitoUserPool
+        CallbackURLs:
+          - ${self:provider.environment.CALLBACK_URL}
+        ExplicitAuthFlows:
+          - ALLOW_CUSTOM_AUTH
+          - ALLOW_USER_PASSWORD_AUTH
+          - ALLOW_USER_SRP_AUTH
+          - ALLOW_REFRESH_TOKEN_AUTH
+        TokenValidityUnits:
+          AccessToken: hours
+          IdToken: hours
+          RefreshToken: days
+        AccessTokenValidity: 1 # default: 1 ora
+        IdTokenValidity: 1 # default: 1 ora
+        RefreshTokenValidity: 30 # default: 30 giorni
+
+    CognitoGroupBuyers:
+      Type: AWS::Cognito::UserPoolGroup
+      Properties:
+        Description: Group of all buyers 
+        GroupName: buyers
+        UserPoolId:
+          Ref: CognitoUserPool
+
+    CognitoGroupSellers:
+      Type: AWS::Cognito::UserPoolGroup
+      Properties:
+        Description: Group of all sellers
+        GroupName: sellers
+        UserPoolId:
+          Ref: CognitoUserPool
+      
+  Outputs:
+    CogntioUserPoolArn:
+      Value: !GetAtt CognitoUserPool.Arn
+      Export:
+        Name: ${self:provider.stage}-user-pool-arn

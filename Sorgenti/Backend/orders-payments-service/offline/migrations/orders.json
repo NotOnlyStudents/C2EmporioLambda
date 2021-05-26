@@ -1,0 +1,43 @@
+{
+    "Table": {
+        "TableName": "dev-orders-payed",
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "customerId",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "id",
+                "AttributeType": "S"
+            }
+        ],
+        "KeySchema": [
+            {
+                "AttributeName": "id",
+                "KeyType": "HASH"
+            }
+        ],
+        "GlobalSecondaryIndexes": [
+            {
+                "IndexName": "userIdIndex",
+                "KeySchema": [
+                    {
+                        "AttributeName": "customerId",
+                        "KeyType": "HASH"
+                    }
+                ],
+                "Projection": {
+                    "ProjectionType": "ALL"
+                },
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": 5,
+                    "WriteCapacityUnits": 5
+                }
+            }
+        ],
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits": 3,
+            "WriteCapacityUnits": 3
+        }
+    }
+}

@@ -1,0 +1,296 @@
+service: products-categories-service
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  stage: ${opt:stage, "dev"}
+  runtime: nodejs12.x
+  region: eu-west-1
+  lambdaHashingVersion: 20201221
+  apiGateway:
+    shouldStartNameWithService: true
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - s3:*
+            - sns:Publish
+          Resource: "*"
+  environment:
+    PRODUCTS_IMAGES_S3: products-images-1${self:provider.stage}
+    PRODUCTS_TABLE_NAME: products-${self:provider.stage}
+    CATEGORIES_TABLE_NAME: categories-${self:provider.stage}
+    QUEUE_NAME: bought-product-queue-${self:provider.stage}.fifo
+    DEAD_QUEUE_NAME: dead-bought-product-queue-${self:provider.stage}.fifo
+    DYNAMODB_CONFIG_FILE_PATH: configs/${self:provider.stage}-dynamo.yml
+
+    PRODUCT_EDITED_ARN: arn:aws:sns:eu-west-1:501082649462:ProductEdited.fifo
+    PRODUCT_DELETED_ARN: arn:aws:sns:eu-west-1:501082649462:ProductDeleted.fifo
+
+variablesResolutionMode: 20210219
+
+package:
+  individually: true
+
+plugins:
+  - serverless-webpack
+  - serverless-dynamodb-local
+  - serverless-dynamodb-seed
+  - serverless-offline
+
+functions:
+  getAllProducts:
+    handler: src/lambdas/products/getAllProducts.default
+    events:
+      - http:
+          path: products
+          method: GET
+          cors: true
+
+  createProduct:
+    handler: src/lambdas/products/createProduct.default
+    events:
+      - http:
+          path: products
+          method: POST
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+  getProductById:
+    handler: src/lambdas/products/getProductById.default
+    events:
+      - http:
+          path: products/{id}
+          method: GET
+          cors: true
+
+  deleteProduct:
+    handler: src/lambdas/products/deleteProduct.default
+    events:
+      - http:
+          path: products/{id}
+          method: DELETE
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+  editProduct:
+    handler: src/lambdas/products/editProduct.default
+    events:
+      - http:
+          path: products/{id}
+          method: PATCH
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+  updateQuantity:
+    handler: src/lambdas/products/updateQuantity.default
+    events:
+      - sqs:
+          arn: !GetAtt "BoughtProductQueue.Arn"
+
+  getAllCategories:
+    handler: src/lambdas/categories/getAllCategories.default
+    events:
+      - http:
+          path: categories
+          method: GET
+          cors: true
+
+  createCategory:
+    handler: src/lambdas/categories/createCategory.default
+    events:
+      - http:
+          path: categories
+          method: POST
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+  editCategory:
+    handler: src/lambdas/categories/editCategory.default
+    events:
+      - http:
+          path: categories/{id}
+          method: PATCH
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+  deleteCategory:
+    handler: src/lambdas/categories/deleteCategory.default
+    events:
+      - http:
+          path: categories/{id}
+          method: DELETE
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+
+resources:
+  Resources:
+    ProductsImagesS3:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: ${self:provider.environment.PRODUCTS_IMAGES_S3}
+        AccessControl: PublicReadWrite
+        CorsConfiguration:
+          CorsRules:
+            - AllowedHeaders: ["*"]
+              AllowedMethods: ["POST"]
+              AllowedOrigins: ["*"]
+
+    BoughtProductQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: ${self:provider.environment.QUEUE_NAME}
+        FifoQueue: true
+        DelaySeconds: 0
+        VisibilityTimeout: 30
+        RedrivePolicy:
+          deadLetterTargetArn: !GetAtt "DeadBoughtProduct.Arn"
+          maxReceiveCount: 1
+
+    DeadBoughtProduct:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: ${self:provider.environment.DEAD_QUEUE_NAME}
+        FifoQueue: true
+        MessageRetentionPeriod: 604800 #7 days, should be enough time to fix an issue and retry the messages again in case of a critical issue
+
+    SqsBoughtProductPolicy:
+      Type: AWS::SQS::QueuePolicy
+      Properties:
+        Queues:
+          - Ref: BoughtProductQueue
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal: "*"
+              Action:
+                - sqs:SendMessage
+              Resource: !GetAtt "BoughtProductQueue.Arn"
+              Condition:
+                ArnEquals:
+                  "aws:SourceArn": arn:aws:sns:eu-west-1:501082649462:ProductBought.fifo
+
+    ProductBoughtTopicSubscription:
+      Type: AWS::SNS::Subscription
+      Properties:
+        Endpoint: !GetAtt "BoughtProductQueue.Arn"
+        Protocol: "sqs"
+        TopicArn: arn:aws:sns:eu-west-1:501082649462:ProductBought.fifo
+
+    CategoriesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.CATEGORIES_TABLE_NAME}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+    ProductsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.PRODUCTS_TABLE_NAME}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: _id
+            AttributeType: S
+          - AttributeName: name
+            AttributeType: S
+          - AttributeName: discountedPrice
+            AttributeType: N
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: NameIndex
+            KeySchema:
+              - AttributeName: _id
+                KeyType: HASH
+              - AttributeName: name
+                KeyType: RANGE
+            Projection:
+              ProjectionType: "ALL"
+            ProvisionedThroughput:
+              ReadCapacityUnits: 5
+              WriteCapacityUnits: 5
+          - IndexName: PriceIndex
+            KeySchema:
+              - AttributeName: _id
+                KeyType: HASH
+              - AttributeName: discountedPrice
+                KeyType: RANGE
+            Projection:
+              ProjectionType: "ALL"
+            ProvisionedThroughput:
+              ReadCapacityUnits: 5
+              WriteCapacityUnits: 5
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+
+    ApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        AuthorizerResultTtlInSeconds: 300
+        IdentitySource: method.request.header.Authorization
+        Name: ${self:provider.stage}-product-authorizer
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          - !ImportValue ${self:provider.stage}-user-pool-arn
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+      seed: true
+      convertEmptyValues: true
+    migration:
+      dir: ./offline
+    seed:
+      products:
+        sources:
+          - table: ${self:provider.environment.PRODUCTS_TABLE_NAME}
+            sources: [./offline/seeds/products.seed.json]
+          - table: ${self:provider.environment.CATEGORIES_TABLE_NAME}
+            sources: [./offline/seeds/categories.seed.json]

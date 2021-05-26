@@ -1,0 +1,51 @@
+patch:
+  description: Edit a product quantity in the buyer's cart 
+  tags:
+    - carts
+  security:
+    - oAuth:
+      - writeUser
+  parameters:
+    - name: productId
+      in: path
+      required: true
+      description: The id of the desired product
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            quantity:
+              type: integer
+              format: int32
+  responses:
+    '204':
+      description: Successfull modification of the product quantity in the cart
+    '400':
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '401':
+      description: No authentication information was given, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '403':
+      description: Wrong permissions, denied
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"
+    '5XX':
+      description: Unexpected server error
+      content:
+        application/json:
+          schema:
+            $ref : "./schemas/error.yml"

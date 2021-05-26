@@ -1,0 +1,166 @@
+service: order-service
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  region: eu-west-1
+  runtime: nodejs12.x
+  stage: ${opt:stage, "dev"}
+  lambdaHashingVersion: 20201221
+  environment:
+    STRIPE_SECRET_KEY: sk_test_51IHqhuEKthtArr3SXYScDHIOczJts6WLSVezPRwEu1ri7Yaka6fVjdkdIm4upAwTuZ2MSHchRcSKJgla0zt3TqbN00e2eqyOr2
+    DYNAMODB_CONFIG_FILE_PATH: configs/${self:provider.stage}-dynamo.yml
+    SNS_CONFIG_FILE_PATH: configs/${self:provider.stage}-sns.yml
+    TO_PAY_ORDERS_TABLE_NAME: ${self:provider.stage}-orders-to-pay
+    PAYED_ORDERS_TABLE_NAME: ${self:provider.stage}-orders-payed
+  apiGateway:
+    shouldStartNameWithService: true
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - sns:Publish
+          Resource: '*'
+
+plugins:
+  - serverless-webpack
+  - serverless-dynamodb-local
+  - serverless-dynamodb-seed
+  - serverless-offline
+
+package:
+  individually: true
+
+functions:
+  newOrder:
+    handler: src/endpoints/newOrder.default
+    events:
+      - http:
+          path: orders
+          method: POST
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+  getOrder:
+    handler: src/endpoints/getOrder.default
+    events:
+      - http:
+          path: orders/{ID}
+          method: GET
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+  getOrders:
+    handler: src/endpoints/getOrders.default
+    events:
+      - http:
+          path: orders
+          method: GET
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+  fulfillOrder:
+    handler: src/endpoints/fulfillOrders.default
+    events:
+      - http:
+          path: orders/{ID}
+          method: PATCH
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: ApiGatewayAuthorizer
+  processPaymentOutcome:
+    handler: src/endpoints/processPaymentOutcome.default
+    events:
+      - http:
+          path: stripe-hook
+          method: POST
+          cors: true
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+      seed: true
+      convertEmptyValues: true
+    migration:
+      dir: ./offline
+    seed: 
+      test:
+        sources:
+        - table: dev-orders-payed
+          sources: [ offline/seeds/orders.json ]
+resources:
+  Resources:
+    OrdersToPayTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.TO_PAY_ORDERS_TABLE_NAME}
+        AttributeDefinitions:
+          - AttributeName: paymentId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: paymentId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+    OrdersPayedTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.PAYED_ORDERS_TABLE_NAME}
+        AttributeDefinitions:
+        - AttributeName: customerId
+          AttributeType: S
+        - AttributeName: id
+          AttributeType: S
+        KeySchema:
+          - AttributeName: id 
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: userIdIndex
+            KeySchema:
+            - AttributeName: customerId
+              KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 5
+              WriteCapacityUnits: 5
+        ProvisionedThroughput:
+          ReadCapacityUnits: 3
+          WriteCapacityUnits: 3
+    
+    ApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        AuthorizerResultTtlInSeconds: 300
+        IdentitySource: method.request.header.Authorization
+        Name: ${self:provider.stage}-address-authorizer
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          -  !ImportValue ${self:provider.stage}-user-pool-arn 
+    
